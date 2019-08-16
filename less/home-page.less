@@ -4,6 +4,10 @@
 
   .intro {
 
+    .atmoshere{
+      width: 100%;
+    }
+
     h2 {
       padding: 15px;
     }
@@ -58,7 +62,17 @@
       }
 
       .btn {
+        .custom-btn();
+        text-align: center;
+
+        &:hover{
+          background: white;
+          color: @btn-bg-color;
+          border: 2px solid black;
+        }
       }
+
+      
     }
 
     .walk-img {
@@ -73,3 +87,47 @@
     }
   }
 }// home
+//------------------------//
+//----------Media---------//
+//.......................//
+
+@media @phone{
+  .navbar{
+    nav{
+      width: 90%;
+    }
+  }
+  
+  .container{
+    justify-content: center;
+    .sky, .launch{
+      display: none;
+    } 
+
+    .blast{
+      width: 90% !important;
+    }
+
+    .btn{
+      width: 90% !important;
+      margin-left: 5%;
+    }
+  }//---container
+
+  .walk{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    margin: 0 auto !important;
+    padding: 15px 0 !important;
+    
+    .walk-text, .walk-img{
+      width: 95% !important;
+      padding: 15px !important;
+    }
+
+    .walk-img{
+      //padding-right: 10%;
+    }
+  }//---walk
+}
